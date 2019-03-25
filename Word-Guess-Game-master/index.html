@@ -9,30 +9,29 @@
     <title>Stranger Things Hangman</title>
   </head>
   <body>
-    <div class="audio">
-      <audio
+    <p>
+      <embed
         src="assets/images/stranger-things-theme-song.mp3"
-        preload="auto"
-        controls="none"
-      ></audio>
-    </div>
+        autostart="true"
+        loop="false"
+        width="2"
+        height="2"
+      />
+    </p>
 
     <!-----<img src="assets/images/alphabetWall.jpeg">-->
 
-    <div class="hang-man-view text-center col-xs-6">
+    <header>
+        <div class="hang-man-view text-center col-xs-6">
       <img
         id="logo"
         src="assets/images/Stranger_Things_logo.png"
         alt="Stranger Things Logo"
       />
-      <br />
-      <div id="imageHolder text-center">
-        <img class="thumbnail img-responsive" src="" id="imagesForWords" />
-      </div>
-    </div>
-
+    </header>
+<br>
     <!-- Box that contains the current word -->
-    <div class="container">
+    <div class="container1">
       <div class="word col-xs-2">
         <h1>Current Word:</h1>
         <div id="hold-word">
@@ -42,7 +41,7 @@
     </div>
 
     <!-- the panel for the letter guesses and win counts -->
-    <div class="container">
+    <div class="container2">
       <div class="score-view col-xs-2">
         <div class="row">
           <div class="col-xs-12">
@@ -66,6 +65,6 @@
   </body>
 
   <footer>
-    <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game2.js"></script>
   </footer>
 </html>

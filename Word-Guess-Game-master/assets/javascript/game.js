@@ -87,15 +87,6 @@ document.onkeyup = function(event) {
   }
 };
 
-//background music
-var myTheme;
-var randomObject;
-
-function music() {
-  myTheme = new Sound("assets/audio/themeMusic.mp3");
-  myTheme.play();
-}
-
 function restart() {
   randomIndex();
   console.log(word);
@@ -106,4 +97,20 @@ function restart() {
   document.getElementById("remainingTries").innerHTML = tries;
   document.getElementById("lettersTried").innerHTML = triedLetters;
   guessLetter();
+}
+
+function dashes(word) {
+  letterArray = word.split("");
+  //finding the index number of the word in the original array
+  //fix the removal of the words from the list. Or add an element to the object that is a boolean and changes
+  //when the word is reset
+  for (var i = 0; i < letterArray.length; i++) {
+    if (letterArray[i] === " ") {
+      dashArray.push(" ");
+    } else {
+      dashArray.push("__");
+    }
+  }
+  replaceDash();
+  console.log(dashArray);
 }
